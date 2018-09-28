@@ -30,6 +30,6 @@
 }
 #okplayer{
   position: absolute !important;
-  top: calc(100vh - 40px) !important;
+  top: 0 !important;
   z-index: 1 !important;
 }
