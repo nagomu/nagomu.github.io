@@ -1,5 +1,7 @@
 !function(e){e.fn.scroll=function(s){var t=e.extend({},{speed:800,animation:"swing",position:!1,hash:!1},s);this.on("click.smoothscroll",function(s){s.preventDefault();var o="html,body",i=t.speed,a=t.animation,n=t.position,l=t.hash,h=e(this).attr("href"),c=e(h),d=c.length,c=d?c:e(o),u=c.offset().top;if(n&&u)var u=u-n;e(o).stop().animate({scrollTop:u},i,a,function(){l&&(window.location.hash=d?h:"")}),e(window).on("mousewheel",function(){e(o).stop()})})}}(jQuery);var template='<div class="schedule"><div class="schedule_header"><h2>Schedule</h2><p class="show-all-schedules"><a href="/tagged/schedule" class="button">Show all schedules</a></p></div><div class="schedules">{{#posts}}<div class="post--schedule"><h3><a href="{{link}}">{{{title}}}</a></h3>{{{description}}}</div>{{/posts}}</div>',showSchedules=function(){console.log("test");var e="/tagged/schedule/rss";$(".js-schedules");var s={posts:[]};Mustache.parse(template),$.ajax({url:e,success:function(e){var t=$(e).find("channel").find("item");t.each(function(){var e=$(this),t={};t.title=e.find("title").text(),t.link=e.find("guid").text(),t.description=e.find("description").text(),s.posts.push(t)}),$(".js--schedules").html(Mustache.render(template,s))},error:function(){}})};$(function(){$.okvideo({
-  video:"LJjWS_r10t4",
+  playlist: {
+    list: 'PLZQ-F0sAhmriEaGmwYgiArl7E16qxBzqP',
+  },
   volume:0,
   controls:!0,
   hd:!0
