@@ -33,3 +33,12 @@
   top: 0 !important;
   z-index: 1 !important;
 }
+.event::after {
+  content: '';
+  display: block;
+  width: 100%;
+  clear: both;
+}
+.event img {
+  width: 100%;
+}
